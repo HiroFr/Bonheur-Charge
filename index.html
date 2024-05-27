@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css" type="text/css">
+  <title>Document</title>
+</head>
+<body>
+  <h1>Bonheur Charge</h1>
+
+  <section class="infos">
+    <h2>Mes infos</h2>
+    <div class="card">
+      <div class="nbrAutonomie">
+        <label for="">Autonomie Max</label>
+        <div class="nbrEnd">
+          <input id="kmMax" type="number">
+          <p>Km</p>
+        </div>
+      </div>
+      <div class="nbrAutonomie">
+        <label for="">Autonomie Actuel</label>
+        <div class="nbrEnd">
+          <input id="texte" type="number">
+          <p>Km</p>
+        </div>
+      </div>
+      <button id="btn" type="button">Valider</button>
+    </div>
+  </section>
+
+  <p class="textInfos">Les calculs (estimé)</p>
+  <div class="nbrAutonomie calc">
+    <p>Pourcentage</p>
+    <p id="result"></p>
+  </div>
+
+  <footer>
+    <p>Design and Build by HiroFr</p>
+    <p>v1.0.0</p>
+  </footer>
+  
+
+  <script src="app.js"></script>
+</body>
+</html>
