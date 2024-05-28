@@ -10,31 +10,61 @@
   <h1>Bonheur Charge</h1>
 
   <section class="infos">
-    <h2>Mes infos</h2>
+    <div class="title">
+      <h2>Mes infos</h2>
+      <button id="btn" type="button">Valider</button>
+    </div>
+
     <div class="card">
       <div class="nbrAutonomie">
-        <label for="">Autonomie Max</label>
+        <label for="">Km Max</label>
         <div class="nbrEnd">
           <input id="kmMax" type="number">
           <p>Km</p>
         </div>
       </div>
       <div class="nbrAutonomie">
-        <label for="">Autonomie Actuel</label>
+        <label for="">Km Actuel</label>
         <div class="nbrEnd">
           <input id="texte" type="number">
-          <p>Km</p>
+          <p>km</p>
         </div>
       </div>
-      <button id="btn" type="button">Valider</button>
+      <div class="nbrAutonomie">
+        <label for="">Batterie</label>
+        <div class="nbrEnd">
+          <p>5,5 kWh</p>
+        </div>
+      </div>
+      <div class="nbrAutonomie">
+        <label for="">Capacité de charge</label>
+        <div class="nbrEnd">
+          <p>1,8 kW</p>
+        </div>
+      </div>
     </div>
   </section>
 
-  <p class="textInfos">Les calculs (estimé)</p>
-  <div class="nbrAutonomie calc">
-    <p>Pourcentage</p>
-    <p id="result"></p>
-  </div>
+  <div id="error" class="boxError"></div>
+
+  <section class="infos">
+    <h2>Les calculs <small>(estimé)</small></h2>
+    <div class="card">
+      <div class="nbrAutonomie">
+        <label for="">Pourcentage</label>
+        <div class="nbrEnd">
+          <p id="result"></p>
+        </div>
+      </div>
+      <div class="nbrAutonomie">
+        <label for="">Temps de charge</label>
+        <div class="nbrEnd">
+          <p></p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
 
   <footer>
     <p>Design and Build by HiroFr</p>

@@ -24,6 +24,12 @@ h1 {
   gap: 32px;
 }
 
+.title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
 .infos h2 {
   margin: 0;
   font-weight: 400;
@@ -34,6 +40,9 @@ h1 {
   display: flex;
   flex-direction: column;
   gap: 18px;
+  padding: 14px 20px;
+  border-radius: 12px;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
 }
 
 .nbrAutonomie {
@@ -44,25 +53,44 @@ h1 {
 
 label {
   font-size: 20px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .nbrEnd {
   display: flex;
   align-items: flex-end;
-  gap: 8px;
+  gap: 4px;
 }
 
 .nbrEnd input {
-  width: 40px;
+  width: 48px;
   background-color: #FFFFFF;
-  border: none;
-  font-weight: 600;
-  font-size: 20px;
+  border: 1px solid #efefef;
+  border-radius: 4px;
+  font-size: 19px;
   text-align: end;
+  padding: 0;
 }
 
 .nbrEnd p {
   font-size: 20px;
+}
+
+.boxError {
+  visibility: hidden;
+  display: flex;
+  align-items: center;
+  padding: 12px;
+  margin: 12px auto;
+  width: fit-content;
+  background-color: #FFF8F7;
+  color: #D13415;
+  border: 1px solid #F5A898;
+  border-radius: 14px;
+  font-size: 16px;
+  gap: 8px;
 }
 
 #btn {
@@ -74,12 +102,12 @@ label {
   font-size: 14px;
   font-weight: 600;
   color: #fff;
-  margin: 0 auto;
 }
 
 .textInfos {
   margin-top: 62px;
   font-size: 24px;
+  color: #0066DE;
 }
 
 .calc {
@@ -89,5 +117,5 @@ label {
 footer {
   display: flex;
   justify-content: space-between;
-  margin-top: 20vh;
+  margin-top: 10vh;
 }
