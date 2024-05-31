@@ -1,6 +1,6 @@
 # Bonheur Charge
 
-Une application web pour avoir une estimation du pourcentage de batterie de son véhicule AMI.
+Une application web pour avoir une estimation du pourcentage de batterie et du temps de charge de sa Citroën AMI.
 
 *Design and Build by HiroFr*
 
