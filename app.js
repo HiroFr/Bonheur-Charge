@@ -29,11 +29,13 @@ document.addEventListener("DOMContentLoaded", () => {
     return pourcentage.toFixed(2) + "%";
   }
   
-  function calculerTempsDeCharge(kilometresRestants, autonomieMaximale, batterie, capacitéDeCharge) {
+  function calculerTempsDeCharge(kilometresRestants, autonomieMaximale, batterie, capacitéDeCharge, efficacité) {
     // Calcul l'énergie nécessaire en kilowattheures
-    var kilowattheures = (autonomieMaximale - kilometresRestants) / autonomieMaximale * batterie;
+    var energieStocke = batterie * ((autonomieMaximale - kilometresRestants) / autonomieMaximale);
+    // Ajustement pour l'efficacité de charge
+    var ernergieFournie = energieStocke / efficacité;
     // Calcul le temps de charge en heures
-    var tempsDeChargeHeures = kilowattheures / capacitéDeCharge;
+    var tempsDeChargeHeures = ernergieFournie / capacitéDeCharge;
     // Converti le temps de charge en minutes
     var tempsDeChargeMinutes = tempsDeChargeHeures * 60;
     // Calcul les heures et les minutes
@@ -50,10 +52,12 @@ document.addEventListener("DOMContentLoaded", () => {
   
     const kWh = parseFloat(document.getElementById('kWh').value);
     const kW = parseFloat(document.getElementById('kW').value);
+
+    const efficacité = 0.8;
   
     // Calcul et affiche les résultats
     resultPourcentage.innerHTML = calculerPourcentageAutonomie(kmActuel, kmMax);
-    resultTempsDeCharge.innerHTML = calculerTempsDeCharge(kmActuel, kmMax, kWh, kW);
+    resultTempsDeCharge.innerHTML = calculerTempsDeCharge(kmActuel, kmMax, kWh, kW, efficacité);
 
   });
 
